@@ -1,4 +1,5 @@
-Create a next.js to-do app at github.com/yourusername/nextjs-todos.
+Create a next.js to-do app at github.com/yourusername/nextjs-todos
+Example: https://ibgrav-nextjs-todos.netlify.app/
 
 The requirements are:
 
@@ -20,21 +21,5 @@ The requirements are:
     - Update a to-do
     - Delete a to-do
 8. Deploy to netlify
-    - Create a netlify account linked to your github (if you don't have one)
-    - create `./netlify.toml` with contents:
-        ```toml
-        [build]
-            command = "npm run build"
-            publish = ".next"
-
-        [[plugins]]
-            package = "@netlify/plugin-nextjs"
-        ```
-    - Install [netlify cli](https://docs.netlify.com/cli/get-started/)
-    - `netlify login`
-    - `netlify init`
-        - Create a new site titled `webdev-yourusername-todos` under your personal team
-        - Ignore `Error: Failed retrieving GitHub repository information with error`
-    - `netlify build`
-    - `netlify deploy --prod`
-    - Your site should now be live at `webdev-yourusername-todos.netlify.app`
+    - url: yourusername-nextjs-todos.netlify.app
+    - continuous deployment through github integration

@@ -1,12 +1,11 @@
 {
-  "name": "webdev-ibgrav-todos",
+  "name": "@ibgrav/nextjs-todos",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "start": "next start",
-    "build": "next build",
-    "deploy": "netlify build && netlify deploy --prod"
+    "build": "next build"
   },
   "dependencies": {
     "next": "12.3.1",
