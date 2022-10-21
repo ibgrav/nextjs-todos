@@ -22,24 +22,9 @@ export function Footer({ renderDate }: FooterProps) {
   }, []);
 
   return (
-    <>
-      <style jsx>{`
-        footer {
-          display: flex;
-          justify-content: space-between;
-        }
-
-        @media and (max-width: 600px) {
-          footer {
-            flex-flow: column;
-          }
-        }
-      `}</style>
-
-      <footer>
-        {<div>SWAPI Person: {person?.name}</div>}
-        <div>Rendered at: {renderDate}</div>
-      </footer>
-    </>
+    <footer className="flex flex-col md:flex-row justify-between">
+      {<div>SWAPI Person: {person?.name}</div>}
+      <div>Rendered at: {renderDate}</div>
+    </footer>
   );
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getLocalTodos, setLocalTodos } from "../../lib/local-todos";
-import { CreateToDo } from "./Create-ToDo";
-import { ToDo } from "./ToDo";
+import { CreateToDo } from "./Create-To-Do";
+import { ToDo } from "./To-Do";
 
 export function ToDos() {
   const [todos, setTodos] = useState<Array<string>>([]);
@@ -39,28 +39,14 @@ export function ToDos() {
   };
 
   return (
-    <>
-      <style jsx>{`
-        ol {
-          width: 100%;
-          margin: 0 0 2rem 0;
-          padding: 0;
-        }
+    <div className="mb-8">
+      <ol className="w-full mb-8">
+        {todos.map((value, i) => (
+          <ToDo key={i} value={value} onDelete={() => onDeleteTodo(i)} onUpdate={(value) => onUpdateTodo(i, value)} />
+        ))}
+      </ol>
 
-        .todos {
-          margin-bottom: 2rem;
-        }
-      `}</style>
-
-      <div className="todos">
-        <ol>
-          {todos.map((value, i) => (
-            <ToDo key={i} value={value} onDelete={() => onDeleteTodo(i)} onUpdate={(value) => onUpdateTodo(i, value)} />
-          ))}
-        </ol>
-
-        <CreateToDo onCreate={onCreateTodo} />
-      </div>
-    </>
+      <CreateToDo onCreate={onCreateTodo} />
+    </div>
   );
 }
