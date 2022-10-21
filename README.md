@@ -1,7 +1,9 @@
+# Next.js To-Do App
+
 Create a [next.js](https://nextjs.org/docs/api-reference/create-next-app) to-do app at github.com/yourusername/nextjs-todos \
 Example: https://ibgrav-nextjs-todos.netlify.app/
 
-The requirements are:
+## Requirements
 
 1. Must be typescript
 2. Reuse and componentize where appropriate
